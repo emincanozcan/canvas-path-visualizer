@@ -1,0 +1,101 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      color: white;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    main {
+      height: 100%;
+      display: flex;
+      background: black;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      border: 1px solid #333;
+    }
+
+    #point-list {
+      margin-right: 20px;
+      background: #111;
+      padding: 20px;
+      width: 200px;
+      overflow-y: auto;
+    }
+
+    #point-list h2 {
+      text-align: center;
+      font-size: 24px;
+      margin: 0 0 12px 0;
+      padding: 0;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    td {
+      padding: 4px 8px;
+    }
+
+    #add-point {
+      cursor: pointer;
+      border: none;
+      display: block;
+      margin: 20px auto 0 auto;
+      padding: 8px 16px;
+      overflow: visible;
+      background: steelblue;
+      width: auto;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    #random {
+      cursor: pointer;
+      border: none;
+      display: block;
+      margin: 20px auto 0 auto;
+      padding: 8px 16px;
+      overflow: visible;
+      background: steelblue;
+      width: auto;
+      color: inherit;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section id="point-list">
+      <h2>Points</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+          </tr>
+        </thead>
+        <tbody id="point-table-body"></tbody>
+      </table>
+
+      <button id="add-point">Add Point</button>
+      <button id="random">Random</button>
+    </section>
+    <canvas id="canvas"></canvas>
+  </main>
+</body>
+
+</html>
+
+<script src="./canvas.js"></script>
